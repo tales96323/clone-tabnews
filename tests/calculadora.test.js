@@ -29,3 +29,11 @@ test("espero que 1+1 seja 2", () => {
 // Mas esse valor escrito no experado e toBe é como vender churros pra sí mesmo. Ridiculo.
 // O teste tem dois lados. Temos que resolver isso.
 // Tem que ter o valor gerado de forma dinamicamente e outro tem que ser o Hardcoded
+
+//agora um teste real. IMportamos o que vem do model calculadora
+const calculadora = require("../models/calculadora.js");
+
+test("somar 2 + 9 devia da 11", () => {
+    const resultado = calculadora.somar(2, 9);
+    expect(resultado).toBe(11)
+})
